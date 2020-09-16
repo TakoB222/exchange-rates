@@ -7,10 +7,10 @@ type respJSON struct{
 	Sale string `json:"sale"`
 }
 type Rate struct{
-	ccy string
-	base_ccy string
-	buy string
-	sale string
+	Сcy string
+	Base_ccy string
+	Buy string
+	Sale string
 }
 
 
