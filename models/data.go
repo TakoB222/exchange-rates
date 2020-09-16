@@ -1,6 +1,6 @@
-package main
+package models
 
-type respJSON struct{
+type RespJSON struct{
 	Ccy string `json:"ccy"`
 	Base_ccy string `json:"base_ccy"`
 	Buy string `json:"buy"`
