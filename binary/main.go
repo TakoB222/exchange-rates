@@ -10,10 +10,10 @@ import (
 )
 
 type Temp struct {
-	a1 int8
-	a2 int16
-	a3 int32
-	a4 int64
+	A1 int8
+	A2 int16
+	A3 int32
+	A4 int64
 }
 
 func main(){
@@ -31,7 +31,7 @@ func main(){
 }
 
 func write(obj *Temp){
-	file , err := os.OpenFile("file.bin", os.O_CREATE, 0666)
+	file , err := os.OpenFile("file.bin", os.O_CREATE, 0777)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -45,7 +45,7 @@ func write(obj *Temp){
 }
 
 func read(){
-	var obj = &Temp{}
+	var obj Temp
 	file, err := os.OpenFile("file.bin", os.O_RDONLY, 0777)
 	if err != nil {
 		fmt.Println(err)
@@ -57,5 +57,5 @@ func read(){
 	}else{
 		fmt.Println("success read from file")
 	}
-	fmt.Printf("%+v\n", *obj)
+	fmt.Printf("%+v\n", obj)
 }
