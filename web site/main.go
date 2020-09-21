@@ -101,6 +101,7 @@ func logoutHandler(w http.ResponseWriter, r *http.Request){
 	if r.Header["Cookie"] != nil{
 		http.SetCookie(w, &http.Cookie{
 			Name: "login",
+			Value: "",
 			MaxAge: -1,
 			Expires: time.Now().Add(-100 * time.Hour),// set expires for older versions
 		})
