@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Evsss20/practice/exchange rates/models"
+	"./models"
 	"encoding/json"
 	"fmt"
 	"net/http"
