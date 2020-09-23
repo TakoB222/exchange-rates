@@ -10,6 +10,9 @@ import (
 var Db *sql.DB
 
 func init(){
+	os.Setenv("DB_USER", "postgres")
+	os.Setenv("DB_PASSWORD","dfghjk1503")
+	os.Setenv("DB_NAME","site")
 	DB_USER := os.Getenv("DB_USER")
 	DB_PASSWORD := os.Getenv("DB_PASSWORD")
 	DB_NAME := os.Getenv("DB_NAME")
